@@ -21,7 +21,7 @@ jobs:
           ${{ runner.os }}-node-
     - run: npm ci
 
-    - run: ./gradlew assembleRelease -Dorg.gradle.logging.level=info
+    - run: ./gradlew bundleRelease 
       working-directory: android
       name: Build Android apk (debug)
 
