@@ -37,8 +37,8 @@ import {
 
 GoogleSignin.configure({
   scopes: ['profile', 'email'], // what API you want to access on behalf of the user, default is email and profile
-  webClientId: '417998138900-b22uil2gbaocg5u6944oo5qmq5rp4ef8.apps.googleusercontent.com', // client ID of type WEB for your server (needed to verify user ID and offline access)
-  androidClientId: "417998138900-b22uil2gbaocg5u6944oo5qmq5rp4ef8.apps.googleusercontent.com",
+  webClientId: '51274654893-6h5p351kn411dc0efentf5ltpdrr3l8k.apps.googleusercontent.com', // client ID of type WEB for your server (needed to verify user ID and offline access)
+  androidClientId: "51274654893-nqgsqheq587f2vkh6g2liec9vnl9k6p7.apps.googleusercontent.com",
   offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
   // hostedDomain: '', // specifies a hosted domain restriction
   // loginHint: '', // [iOS] The user's ID, or email address, to be prefilled in the authentication UI if possible. [See docs here](https://developers.google.com/identity/sign-in/ios/api/interface_g_i_d_sign_in.html#a0a68c7504c31ab0b728432565f6e33fd)
@@ -68,7 +68,7 @@ const LoginScreen = ({navigation}) => {
       const userInfo = await GoogleSignin.signIn();
       setloggedIn(true);
       console.log(userInfo)
-      this.setState({ userInfo });
+      setuserInfo(userInfo );
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         console.log("1")
